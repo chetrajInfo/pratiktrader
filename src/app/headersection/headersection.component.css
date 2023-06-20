@@ -1,0 +1,114 @@
+
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: content-box;
+    font-family: 'Times New Roman', Times, serif;
+
+}
+/*
+
+header{
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    gap: 500px;
+    padding: 2px;
+    align-items: center;
+}
+
+header img{
+    height: 140px;
+    width: 190px;
+}
+div > .product{
+    padding:6px 6px 10px 6px;
+    background-color: grey;
+    font-size: 16px;
+    font-weight: bold;
+    border-radius: 2px;
+    top:2px;
+    margin-right: 2px;
+}
+input[type="text"]{
+    height: 30px;
+    width: 190px;
+    border-radius: 2px;
+    border-style: ridge;
+}
+button{
+    height: 30px;
+    width: 60px;
+    border-radius: 2px;
+    font-size: 14px;
+    font-weight: bold;
+    cursor:pointer;
+}
+*/
+
+header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 2px;
+    flex-wrap: wrap;
+}
+.wrap-search{
+   
+    border: 2px solid black;
+}
+
+header img {
+    height: 140px;
+    width: 190px;
+}
+
+header .product {
+    padding: 6px 6px 9px 12px;
+    background-color: grey;
+    font: bold 16px/1;
+    
+}
+
+header input[type="text"] {
+    height: 30px;
+    width: 190px;
+    border-style: solid;
+    padding-left: 4px;
+    
+}
+
+header button {
+    height: 30px;
+    width: 60px;
+    font: bold 14px/1;
+    cursor: pointer;
+}
+
+nav{
+   height: 139px;
+}
+ul{
+    display: flex;
+    justify-content: flex-start;
+    gap:90px;
+    background-color: rgb(95, 83, 171);
+    flex-wrap: wrap;
+    flex-direction: row;  
+    list-style: none;
+    text-decoration: none;
+    
+}
+li{
+    font-style: none;
+    font-size: 17px;
+    font-weight: bold;
+    transition: 0.2s ease-in;
+    padding:10px;
+    color: white;
+}
+li:hover{
+    cursor: pointer;
+    box-shadow: 3px 3px 6px white;
+    color: black;
+}
