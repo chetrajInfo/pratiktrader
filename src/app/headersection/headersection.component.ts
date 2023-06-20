@@ -6,5 +6,9 @@ import { Component } from '@angular/core';
   styleUrls: ['./headersection.component.css']
 })
 export class HeadersectionComponent {
+  navIsActive = false;
 
+  toggleNav() {
+    this.navIsActive = !this.navIsActive;
+  }
 }

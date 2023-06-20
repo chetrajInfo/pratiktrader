@@ -1,50 +1,9 @@
-
-*{
+* {
     padding: 0;
     margin: 0;
     box-sizing: content-box;
     font-family: 'Times New Roman', Times, serif;
-
 }
-/*
-
-header{
-    display: flex;
-    flex-direction: row;
-    flex-wrap: wrap;
-    gap: 500px;
-    padding: 2px;
-    align-items: center;
-}
-
-header img{
-    height: 140px;
-    width: 190px;
-}
-div > .product{
-    padding:6px 6px 10px 6px;
-    background-color: grey;
-    font-size: 16px;
-    font-weight: bold;
-    border-radius: 2px;
-    top:2px;
-    margin-right: 2px;
-}
-input[type="text"]{
-    height: 30px;
-    width: 190px;
-    border-radius: 2px;
-    border-style: ridge;
-}
-button{
-    height: 30px;
-    width: 60px;
-    border-radius: 2px;
-    font-size: 14px;
-    font-weight: bold;
-    cursor:pointer;
-}
-*/
 
 header {
     display: flex;
@@ -53,8 +12,8 @@ header {
     padding: 2px;
     flex-wrap: wrap;
 }
-.wrap-search{
-   
+
+.wrap-search {
     border: 2px solid black;
 }
 
@@ -67,7 +26,6 @@ header .product {
     padding: 6px 6px 9px 12px;
     background-color: grey;
     font: bold 16px/1;
-    
 }
 
 header input[type="text"] {
@@ -75,7 +33,6 @@ header input[type="text"] {
     width: 190px;
     border-style: solid;
     padding-left: 4px;
-    
 }
 
 header button {
@@ -85,21 +42,22 @@ header button {
     cursor: pointer;
 }
 
-nav{
-   height: 139px;
+nav {
+    height: 139px;
 }
-ul{
+
+ul {
     display: flex;
     justify-content: flex-start;
     gap:90px;
     background-color: rgb(95, 83, 171);
     flex-wrap: wrap;
-    flex-direction: row;  
+    flex-direction: row;
     list-style: none;
     text-decoration: none;
-    
 }
-li{
+
+li {
     font-style: none;
     font-size: 17px;
     font-weight: bold;
@@ -107,8 +65,56 @@ li{
     padding:10px;
     color: white;
 }
-li:hover{
+
+li:hover {
     cursor: pointer;
     box-shadow: 3px 3px 6px white;
     color: black;
+}
+
+.burger {
+    display: none;
+}
+
+
+
+
+
+/* styles for mobile view */
+@media screen and (max-width: 600px) {
+    header {
+        flex-direction: column;
+    }
+
+    header img {
+        width: 66.67vw; /* 2/3 of the viewport width */
+        height: auto; /* to maintain the aspect ratio of the image */
+    }
+
+    .burger {
+        display: block;
+        cursor: pointer;
+    }
+
+    .burger div {
+        width: 25px;
+        height: 3px;
+        background-color: black;
+        margin: 5px;
+    }
+
+    nav {
+        display: none;
+        width: 100%;
+        height: auto;
+    }
+
+    nav.active {
+        display: block;
+    }
+
+    ul {
+        flex-direction: column;
+        gap: 10px;
+    }
 }
