@@ -11,6 +11,7 @@ header {
     justify-content: space-between;
     padding: 2px;
     flex-wrap: wrap;
+   
 }
 
 .wrap-search {
@@ -44,6 +45,7 @@ header button {
 
 nav {
     height: 139px;
+    
 }
 
 ul {
