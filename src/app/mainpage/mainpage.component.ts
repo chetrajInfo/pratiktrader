@@ -1,4 +1,5 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, ElementRef, OnInit, ViewChild } from '@angular/core';
+declare var google: any; // Declare google so TypeScript knows about the Google object
 
 @Component({
   selector: 'app-mainpage',
@@ -6,6 +7,12 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./mainpage.component.css']
 })
 export class MainpageComponent implements OnInit {
+
+  @ViewChild('mapElement', { static: true }) mapNativeElement: ElementRef | any;
+
+
+
+  constructor() { }
 
   customerReviews = [
     {review: "This place is best to when comes for service and right order in right time.", author: "Rajesh Singh Thakuri"},
@@ -25,6 +32,22 @@ export class MainpageComponent implements OnInit {
 currentReviewIndex = 0;
 
   ngOnInit() {
+
+    const map = new google.maps.Map(this.mapNativeElement.nativeElement, {
+      center: { lat: 27.685114783262023, lng: 85.34541726568678 }, // Replace with your latitude and longitude
+      zoom: 15 // Change zoom as per your requirement
+    });
+
+    const marker = new google.maps.Marker({
+      position: { lat: 27.685114783262023, lng: 85.34541726568678 }, // Replace with your latitude and longitude
+      map: map,
+      title: 'New Pratik Trader'
+    });
+    
+
+
+
+
     setInterval(() => {
       this.currentReviewIndex = (this.currentReviewIndex + 1) % this.customerReviews.length;
     }, 3000); // change the review every 1 second

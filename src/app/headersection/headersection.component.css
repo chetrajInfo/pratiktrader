@@ -58,6 +58,14 @@ ul {
     list-style: none;
     text-decoration: none;
 }
+a{
+    list-style: none;
+    color: white;
+    text-decoration: none;
+}
+a:hover{
+    color:black;
+}
 
 li {
     font-style: none;
