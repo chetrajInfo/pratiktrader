@@ -6,17 +6,21 @@ import { AppComponent } from './app.component';
 import { HeadersectionComponent } from './headersection/headersection.component';
 import { MainpageComponent } from './mainpage/mainpage.component';
 import { FootersectionComponent } from './footersection/footersection.component';
+import { ContactComponent } from './contact/contact.component';
+import { ReactiveFormsModule } from '@angular/forms';
 
 @NgModule({
   declarations: [
     AppComponent,
     HeadersectionComponent,
     MainpageComponent,
-    FootersectionComponent
+    FootersectionComponent,
+    ContactComponent
   ],
   imports: [
     BrowserModule,
-    AppRoutingModule
+    AppRoutingModule,
+    ReactiveFormsModule
   ],
   providers: [],
   bootstrap: [AppComponent]
