@@ -8,6 +8,8 @@ import { MainpageComponent } from './mainpage/mainpage.component';
 import { FootersectionComponent } from './footersection/footersection.component';
 import { ContactComponent } from './contact/contact.component';
 import { ReactiveFormsModule } from '@angular/forms';
+import { EmailComponent } from './email/email.component';
+import { HttpClientModule } from '@angular/common/http';
 
 @NgModule({
   declarations: [
@@ -15,12 +17,14 @@ import { ReactiveFormsModule } from '@angular/forms';
     HeadersectionComponent,
     MainpageComponent,
     FootersectionComponent,
-    ContactComponent
+    ContactComponent,
+    EmailComponent
   ],
   imports: [
     BrowserModule,
     AppRoutingModule,
-    ReactiveFormsModule
+    ReactiveFormsModule,
+    HttpClientModule
   ],
   providers: [],
   bootstrap: [AppComponent]

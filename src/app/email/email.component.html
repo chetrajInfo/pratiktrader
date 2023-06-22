@@ -1,0 +1,26 @@
+<form [formGroup]="emailForm" (ngSubmit)="sendEmail()">
+
+    <caption>Email Us:</caption>
+
+    <div>
+        <label for="name">Your Name:</label>
+    </div>
+    <div>
+        <input type="text" id="name" formControlName="name">
+    </div>
+
+    <div>
+        <label for="email">From:</label>
+    </div>
+    <div>
+        <input type="text" id="email" formControlName="email">
+    </div>
+    <div>
+        <label for="message">Message:</label>
+    </div>
+    <div>
+
+        <textarea id="message" formControlName="message"></textarea>
+    </div>
+    <button type="submit" class="btn btn-primary">Send</button>
+</form>

@@ -1,0 +1,36 @@
+form{
+   display: flex;
+   flex-direction: column;
+   margin: -5% 0 2% 33%;
+   width: 500px;
+}
+input[type="text"]{
+    width: 500px;
+    height: 39px;
+}
+textarea{
+    width: 500px;
+    height: 160px;
+}
+caption{
+    text-align: center;
+    font-weight: bold;
+    color: black;
+}
+
+@media screen and (max-width:600px) {
+    
+    form{
+        margin: auto;
+        width: 320px;
+    }
+    input[type="text"]{
+        width: 320px;
+    }
+    button{
+        width: 320px;
+    }
+    textarea{
+        width: 320px;
+    }
+}
